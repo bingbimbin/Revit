@@ -1,0 +1,52 @@
+<UserControl x:Class="NewJeans.MainUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:NewJeans"
+             Background="#1B1D23">
+    <UserControl.Resources>
+        <!-- TabItem 스타일 지정 -->
+        <Style TargetType="TabItem">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#5A5E6B"/>
+            <!-- 기본 탭 배경색 -->
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="10,6"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TabItem">
+                        <Border Name="Border"
+                                Background="{TemplateBinding Background}"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter x:Name="ContentSite"
+                                              VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"
+                                              ContentSource="Header"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <!-- 선택된 탭일 때만 스타일 변경 -->
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="#FFF99D5D"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Border Margin="10"
+            Padding="10"
+            CornerRadius="10"
+            Background="#2C2F38">
+        <TabControl x:Name="mainTabControl"
+                    Background="#2C2F38"
+                    Foreground="White"
+                    FontSize="14"
+                    TabStripPlacement="Top">
+            <TabItem x:Name="tabProjectFamily" Header="로드된 패밀리"/>
+            <TabItem x:Name="tabRfaFamily" Header="패밀리 선택"/>
+        </TabControl>
+    </Border>
+</UserControl>
