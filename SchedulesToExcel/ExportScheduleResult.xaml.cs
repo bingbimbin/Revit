@@ -39,10 +39,11 @@ namespace NewJeans
             _handler.ProgressChanged += OnProgressChanged;
 
             var schedules = new FilteredElementCollector(doc)
-                                .OfClass(typeof(ViewSchedule))
-                                .Cast<ViewSchedule>()
-                                .Where(vs => !vs.IsTemplate)
-                                .ToList();
+                            .OfClass(typeof(ViewSchedule))
+                            .Cast<ViewSchedule>()
+                            .Where(vs => !vs.IsTemplate)
+                            .OrderBy(vs => vs.Name)
+                            .ToList();
 
             foreach (var schedule in schedules)
             {
