@@ -18,7 +18,7 @@ namespace NewJeans
             {
                 var worksheet = package.Workbook.Worksheets.Add("Connector Data");
 
-                // 헤더 작성
+                // 헤더
                 worksheet.Cells[1, 1].Value = "Category";
                 worksheet.Cells[1, 2].Value = "Family";
                 worksheet.Cells[1, 3].Value = "System Classification";
@@ -42,7 +42,7 @@ namespace NewJeans
                     border.Right.Style = ExcelBorderStyle.Thin;
                 }
 
-                // 데이터 입력
+                // 데이터
                 int row = 2;
                 foreach (var item in classifications)
                 {
