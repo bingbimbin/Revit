@@ -92,7 +92,7 @@ namespace NewJeans
 
             catch (Exception ex)
             {
-                TaskDialog.Show("예외 발생", ex.Message);
+                TaskDialog.Show("오류", ex.Message);
                 return Result.Failed;
             }
         }
@@ -116,7 +116,7 @@ namespace NewJeans
                     Curve curve = edge.AsCurve();               
                     if (curve is Arc arc)
                     {
-                        return 2 * arc.Radius; // 피트 단위
+                        return 2 * arc.Radius;
                     }
                 }
             }
