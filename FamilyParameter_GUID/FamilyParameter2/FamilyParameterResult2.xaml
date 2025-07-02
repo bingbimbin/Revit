@@ -31,7 +31,9 @@
                 Width="80" Background="#1E2A35" Foreground="White"/>
 
         <!-- 파일 목록 ListBox -->
-        <ListBox x:Name="lstFiles" SelectionMode="Extended" ScrollViewer.VerticalScrollBarVisibility="Auto"  Grid.Row="2" Grid.ColumnSpan="2" Margin="10" Background="#3B3F48" Foreground="White" BorderBrush="#5A5D66" BorderThickness="1"/>
+        <ListBox x:Name="lstFiles" SelectionMode="Extended" ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                 Grid.Row="2" Grid.ColumnSpan="2" Margin="10" Background="#3B3F48" Foreground="White" BorderBrush="#5A5D66" 
+                 BorderThickness="1" FontWeight="Normal"/>
 
         <!-- 진행바 -->
         <ProgressBar x:Name="progressBar"
