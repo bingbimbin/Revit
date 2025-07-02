@@ -20,22 +20,22 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <!-- 파일 선택 버튼 -->
+        <-- 파일 선택 버튼 -->
         <Button x:Name="btnBrowse" Content="파일 선택" Click="btnBrowse_Click" Height="30" 
                 Width="80" Grid.Row="1" Grid.Column="0" Margin="10" Background="#1E2A35" 
                 Foreground="White"/>
 
-        <!-- 파일 제거 버튼 -->
+        <-- 파일 제거 버튼 -->
         <Button Content="파일 제거" Click="btnRemoveFile_Click" Grid.Row="1" 
                 Grid.Column="1" Margin="0,10,10,10" HorizontalAlignment="Right" 
                 Width="80" Background="#1E2A35" Foreground="White"/>
 
-        <!-- 파일 목록 ListBox -->
+        <-- 파일 목록 ListBox -->
         <ListBox x:Name="lstFiles" SelectionMode="Extended" ScrollViewer.VerticalScrollBarVisibility="Auto" 
                  Grid.Row="2" Grid.ColumnSpan="2" Margin="10" Background="#3B3F48" Foreground="White" BorderBrush="#5A5D66" 
                  BorderThickness="1" FontWeight="Normal"/>
 
-        <!-- 진행바 -->
+        <-- 진행바 -->
         <ProgressBar x:Name="progressBar"
              Grid.Row="3" Grid.ColumnSpan="2"
              Height="20" 
@@ -45,11 +45,11 @@
              Minimum="0" Maximum="100"
              Visibility="Collapsed"/>
 
-        <!-- 저장 경로 버튼과 텍스트박스 -->
+        <-- 저장 경로 버튼과 텍스트박스 -->
         <Button x:Name="btnBrowse2" Content="저장 경로" Click="btnBrowse_Click2" Width="80" Grid.Row="4" Grid.Column="0" Margin="10" Height="30" Background="#1E2A35" Foreground="White"/>
         <TextBox x:Name="txtFilePath" Text="..." IsReadOnly="True" Height="30" Grid.Row="4" Grid.Column="1" Margin="10" Background="#3B3F48" Foreground="White" BorderBrush="#5A5D66" BorderThickness="1"/>
 
-        <!-- 내보내기 버튼 -->
+        <-- 내보내기 버튼 -->
         <Button x:Name="btnExport" Content="내보내기" Click="btnExport_Click" Width="80" Grid.Row="5" Grid.Column="0" Margin="10" Background="#FFF99D5D" Foreground="White" FontWeight="Bold" Height="25"/>
     </Grid>
 </UserControl>
