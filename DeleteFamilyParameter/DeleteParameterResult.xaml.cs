@@ -1,6 +1,4 @@
 using Autodesk.Revit.UI;
-using Microsoft.Win32;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
@@ -106,7 +104,7 @@ namespace NewJeans
             // 사용자가 선택한 패밀리 이름들 가져오기
             List<string> selectedFamilyNames = lstFiles.SelectedItems.Cast<string>().ToList();
 
-     
+
             if (selectedFamilyNames.Count == 0)
             {
                 MessageBox.Show("삭제할 패밀리를 선택해주세요!", "알림", MessageBoxButton.OK, MessageBoxImage.Warning);
