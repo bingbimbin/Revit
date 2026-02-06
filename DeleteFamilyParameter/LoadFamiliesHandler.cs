@@ -2,7 +2,6 @@ using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Windows;
 
@@ -18,9 +17,9 @@ namespace NewJeans
                 Document doc = app.ActiveUIDocument.Document;
 
                 var familyNames = new FilteredElementCollector(doc)
-                    .OfClass(typeof(FamilyInstance))
-                    .Cast<FamilyInstance>()
-                    .Select(fi => fi.Symbol.Family.Name)
+                    .OfClass(typeof(Family))
+                    .Cast<Family>()
+                    .Select(f => f.Name)
                     .Distinct()
                     .OrderBy(n => n)
                     .ToList();
