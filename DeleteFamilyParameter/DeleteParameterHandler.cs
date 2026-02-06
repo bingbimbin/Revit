@@ -2,10 +2,9 @@ using Autodesk.Revit.DB;
 using Autodesk.Revit.UI;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
+
 
 namespace NewJeans
 {
@@ -59,7 +58,7 @@ namespace NewJeans
                 {
                     trans.Start();
 
-                 
+
                     var allParams = fm.Parameters
                         .Cast<FamilyParameter>()
                         .ToList();
@@ -68,13 +67,13 @@ namespace NewJeans
                         .Where(p => parameterNamesToDelete.Contains(p.Definition.Name))
                         .ToList();
 
-                    if (toDelete.Count == 0) {nonparamfamilies.Add(family.Name);}
-                    else {okfamilies.Add(family.Name);}
+                    if (toDelete.Count == 0) { nonparamfamilies.Add(family.Name); }
+                    else { okfamilies.Add(family.Name); }
 
                     foreach (var p in toDelete)
                     {
                         fm.RemoveParameter(p);
-                     }
+                    }
 
                     trans.Commit();
                 }
@@ -87,7 +86,7 @@ namespace NewJeans
 
             if (nonparamfamilies.Count == 0)
             {
-                MessageBox.Show($"삭제 완료 패밀리 = {okfamilies.Count}개" 
+                MessageBox.Show($"삭제 완료 패밀리 = {okfamilies.Count}개"
                 , "결과",
                 MessageBoxButton.OK, MessageBoxImage.Information);
             }
