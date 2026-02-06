@@ -28,7 +28,7 @@
            Margin="10" Grid.ColumnSpan="3" Foreground="White"/>
 
         <!-- 설명 텍스트 -->
-        <TextBlock Text="배치된 패밀리에 대한 작업"
+        <TextBlock Text="로드된 패밀리에 대한 작업"
            FontSize="12"
            Foreground="White"
            VerticalAlignment="Center"
